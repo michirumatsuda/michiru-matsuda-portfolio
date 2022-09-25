@@ -1,0 +1,116 @@
+
+
+$yellow: #FFD233;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.mainvisual {
+  margin-bottom: 180px;
+  &_inner {
+    width: 90%;
+    margin: 0 auto 80px;
+    max-width: 1100px;
+  }
+  .title {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-top: 300px;
+    span {
+      font-size: 5.625rem;
+      letter-spacing: 0.05em;
+      line-height: 1.25;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}
+
+.section {
+  &_title {
+    color: $yellow;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &_text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  &_text_detail {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    max-width: 590px;
+    line-height: 1.8;
+  }
+}
+
+.theme {
+  width: 90%;
+  margin: 0 auto 180px;
+  max-width: 1100px;
+}
+
+.skill {
+  width: 90%;
+  margin: 0 auto 180px;
+  max-width: 1100px;
+  &_list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    &_item {
+      background-color: $yellow;
+      width: 190px;
+      height: 190px;
+      vertical-align: 20px;
+      border-radius: 190px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 190px;
+      margin: 20px 25px;
+      letter-spacing: 0.15em;
+    }
+  }
+  &_title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.works {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 180px;
+  max-width: 1100px;
+  &_list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    &_item {
+      width: 280px;
+      height: 320px;
+      background-color: rgb(210, 210, 210);
+      border-radius: 40px;
+      margin: 20px;
+    }
+  }
+}
+
+.footer {
+  background-color: $yellow;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
