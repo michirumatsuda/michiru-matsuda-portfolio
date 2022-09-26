@@ -1,7 +1,15 @@
 
 
 $yellow: #FFD233;
+
+@mixin sp {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .mainvisual {
   margin-bottom: 180px;
   position: relative;
@@ -21,6 +29,9 @@ $yellow: #FFD233;
       line-height: 1.25;
       font-weight: bold;
       font-family: 'Roboto', sans-serif;
+      @include sp {
+        font-size: 3rem;
+      }
     }
   }
   &::before {
@@ -33,6 +44,9 @@ $yellow: #FFD233;
     border-radius: 1261px;
     right: -600px;
     top: 200px;
+    @include sp {
+      display: none;
+    }
   }
   &::after {
     content: '';
@@ -44,6 +58,9 @@ $yellow: #FFD233;
     border-radius: 661px;
     left: -260px;
     top: 1380px;
+    @include sp {
+      display: none;
+    }
   }
 }
 
@@ -74,6 +91,16 @@ $yellow: #FFD233;
         transform: translateY(-50%);
       }
     }
+    @include sp {
+      font-size: 3.75rem;
+      margin: 0px 0 30px;
+      span {
+        font-size: 0.75rem;
+        &::before {
+          width: 90px;
+        }
+      }
+    }
   }
 
   &_text {
@@ -81,6 +108,10 @@ $yellow: #FFD233;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
     margin: 60px 0 30px;
+    @include sp {
+      font-size: 1rem;
+      margin: 30px 0;
+    }
   }
 
   &_text_detail {
@@ -88,6 +119,9 @@ $yellow: #FFD233;
     letter-spacing: 0.1em;
     max-width: 590px;
     line-height: 1.8;
+    @include sp {
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -99,6 +133,24 @@ $yellow: #FFD233;
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  @include sp {
+    flex-direction: column;
+    margin-bottom: 90px;
+    .theme_img {
+      text-align: center;
+      position: absolute;
+      width: 180px;
+      top: -100px;
+      right: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .theme_textblock {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }
 
 .skill {
@@ -113,6 +165,9 @@ $yellow: #FFD233;
     padding: 0;
     margin: 0;
     justify-content: center;
+    @include sp {
+      flex-wrap: wrap;
+    }
     &_item {
       background-color: $yellow;
       width: 190px;
@@ -125,6 +180,14 @@ $yellow: #FFD233;
       line-height: 190px;
       margin: 20px 25px;
       letter-spacing: 0.15em;
+      @include sp {
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+        line-height: 120px;
+        font-size: 1rem;
+        margin: 20px 20px;
+      }
     }
   }
   &_title {
@@ -132,6 +195,9 @@ $yellow: #FFD233;
     font-size: 1.5rem;
     margin: 0 auto 20px;
     letter-spacing: 0.1em;
+    @include sp {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -147,6 +213,10 @@ $yellow: #FFD233;
     list-style: none;
     justify-content: center;
     padding: 0;
+    @include sp {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
     &_item {
       width: 280px;
       height: 300px;
@@ -163,6 +233,15 @@ $yellow: #FFD233;
         transform: translate(-50%,-50%);
         width: 380px;
         transition: 0.2s ease-in;
+      }
+      @include sp {
+        width: 150px;
+        height: 150px;
+        margin: 9px;
+        border-radius: 20px;
+        img {
+          width: 200px;
+        }
       }
       &_title {
         position: absolute;
@@ -201,11 +280,18 @@ radial-gradient(at 4% 7%, hsla(162,100%,76%,0.7) 0px, transparent 50%);
 }
 
 .history {
-  width: 90%;
-  margin: 0 auto 180px;
-  max-width: 650px;
+  background-color: #57b7b0;
+  padding: 80px 0 90px;
+  color: #fff;
   position: relative;
   z-index: 1;
+  &_inner{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+  }
   &_title {
     text-align: center;
     font-size: 2rem;
@@ -224,6 +310,13 @@ radial-gradient(at 4% 7%, hsla(162,100%,76%,0.7) 0px, transparent 50%);
       display: inline-block;
       width: 200px;
     }
+    @include sp {
+      font-size: 0.875rem;
+      span {
+        width: 150px;
+        display: block;
+      }
+    }
   }
 }
 
@@ -236,5 +329,6 @@ radial-gradient(at 4% 7%, hsla(162,100%,76%,0.7) 0px, transparent 50%);
   padding: 20px 0;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 

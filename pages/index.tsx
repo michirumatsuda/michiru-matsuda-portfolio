@@ -18,9 +18,8 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        
         <section className={styles.theme}>
-          <div>
+          <div className={styles.theme_textblock}>
             <h2 className={styles.section_title}>
               THEME<br />
             <span>大切にしていること</span>  
@@ -31,7 +30,7 @@ export default function Home() {
               教育・エンタメ・行政・医療・製造業、生活を支える様々な分野の課題に向き合いより快適に、より親切に、お客様と一緒に作り上げていきます。
             </p>
           </div>
-          <div><img src="/photo01.png" alt="Vercel Logo" className="photo" /></div>
+          <div className={styles.theme_img}><img src="/photo01.png" alt="Vercel Logo" className="photo" /></div>
         </section>
         <section className={styles.skill}>
           <h3 className={styles.skill_title}>要件定義からデザイン、コーディング、保守運用まで柔軟に。</h3>
@@ -66,15 +65,17 @@ export default function Home() {
           </ul>
         </section>
         <section className={styles.history}>
-          <h3 className={styles.history_title}>HISTORY</h3>
-          <ul className={styles.history_list}>
-            <li><span>1991.09 - 2011.03</span>徳島生まれ</li>
-            <li><span>2011.04 - 2015.03</span>和歌山大学教育学部</li>
-            <li><span>2015.04 - 2018.06</span>学生服メーカーで生産管理担当</li>
-            <li><span>2018.08 - 2018.11</span>職業訓練でWEB制作について学ぶ</li>
-            <li><span>2018.12 - 2020.06</span>マークアップエンジニア</li>
-            <li><span>2020.06 - 2022.10</span>デザイナー・ディレクター・フロントエンドエンジニア</li>
-          </ul>
+          <div className={styles.history_inner}>
+            <h3 className={styles.history_title}>HISTORY</h3>
+            <ul className={styles.history_list}>
+              <li><span>1991.09 - 2011.03</span>徳島生まれ</li>
+              <li><span>2011.04 - 2015.03</span>和歌山大学教育学部</li>
+              <li><span>2015.04 - 2018.06</span>学生服メーカーで生産管理担当</li>
+              <li><span>2018.08 - 2018.11</span>職業訓練でWEB制作について学ぶ</li>
+              <li><span>2018.12 - 2020.06</span>マークアップエンジニア</li>
+              <li><span>2020.06 - 2022.10</span>デザイナー・ディレクター・フロントエンドエンジニア</li>
+            </ul>
+          </div>
         </section>
       </main>
       <footer className={styles.footer}>
